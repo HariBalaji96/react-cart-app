@@ -1,7 +1,13 @@
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Products from "./pages.js/Products";
+
 function App() {
   return (
     <div className="App">
-      Hello Cart App
+      <Header title="Cart Application" />
+      <Products />
+      <Footer />
     </div>
   );
 }
