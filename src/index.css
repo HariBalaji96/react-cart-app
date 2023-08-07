@@ -72,11 +72,44 @@ nav ul li:hover {
 main {
   height: 70vh;
 }
-
+.product-nav {
+  border-bottom: 1px solid pink;
+  display: flex;
+  padding: 15px;
+}
+.product-nav h2 {
+  font-size: 28px;
+  color: rgb(42, 137, 42);
+  margin: 0 auto;
+}
+#categories {
+  display: flex;
+  list-style: none;
+}
+#categories li {
+  padding-top: none;
+  padding: 5px;
+  border: 1px solid rgb(42, 137, 42);
+}
+#categories li:nth-child(1) {
+  border-radius: 50px 0px 0px 50px;
+}
+#categories li:nth-child(4) {
+  border-radius: 0px 50px 50px 0px;
+}
+#categories li:hover {
+  background-color: rgb(42, 137, 42);
+  color: white;
+  cursor: pointer;
+}
 /* Footer Portion */
 footer {
   height: 10vh;
   width: 100%;
   background-color: rgb(42, 137, 42);
   color: white;
+}
+footer p {
+  text-align: center;
+  padding-top: 1vh;
 }
