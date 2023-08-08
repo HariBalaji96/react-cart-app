@@ -70,7 +70,8 @@ nav ul li:hover {
 
 /* Product Main Pages */
 main {
-  height: 70vh;
+  max-height: 70vh;
+  overflow-y: scroll;
 }
 .product-nav {
   border-bottom: 1px solid pink;
@@ -102,14 +103,57 @@ main {
   color: white;
   cursor: pointer;
 }
+/* Display Component */
+.display-div {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.card-div {
+  width: 20%;
+  background-color: rgb(42, 137, 42);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1%;
+  border-radius: 10px;
+}
+.card-div:hover {
+  border: 2px solid black;
+}
+.card-div img {
+  width: 50%;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+.movie-title {
+  text-align: center;
+  color: white;
+}
+.cart-button {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: transparent;
+  border: 2px solid white;
+  margin: 5px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+.cart-button:hover {
+  background-color: white;
+  color: rgb(42, 137, 42);
+  font-weight: bold;
+}
 /* Footer Portion */
-footer {
+#footer {
   height: 10vh;
   width: 100%;
   background-color: rgb(42, 137, 42);
   color: white;
 }
-footer p {
+#footer p {
   text-align: center;
   padding-top: 1vh;
 }
