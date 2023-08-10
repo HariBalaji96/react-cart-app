@@ -9,7 +9,6 @@ const Nav = () => {
       <ul>
         <li>Products</li>
         <li>Cart</li>
-        <li>Add Items</li>
       </ul>
     </nav>
   );

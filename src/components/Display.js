@@ -1,6 +1,6 @@
 import React from "react";
-import { BsFillCartPlusFill } from "react-icons/bs";
 
+import CartButton from "./CartButton";
 const Display = ({ movies }) => {
   return (
     <div className="display-div">
@@ -11,9 +11,7 @@ const Display = ({ movies }) => {
             alt={movie.title}
           />
           <p className="movie-title">{movie.title}</p>
-          <button className="cart-button">
-            <BsFillCartPlusFill size={20} /> Add to cart
-          </button>
+          <CartButton id={movie.id} />
         </div>
       ))}
     </div>

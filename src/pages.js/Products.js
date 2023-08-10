@@ -30,14 +30,44 @@ const Products = ({ movies, setAPI }) => {
       <div className="product-nav">
         <h2>{heading}</h2>
         <ul id="categories">
-          <li onClick={(e) => handleCategories(e.target.innerHTML)}>Popular</li>
-          <li onClick={(e) => handleCategories(e.target.innerHTML)}>
+          <li
+            style={
+              heading === "Popular"
+                ? { color: "white", backgroundColor: "rgb(42, 137, 42)" }
+                : {}
+            }
+            onClick={(e) => handleCategories(e.target.innerHTML)}
+          >
+            Popular
+          </li>
+          <li
+            style={
+              heading === "Trending"
+                ? { color: "white", backgroundColor: "rgb(42, 137, 42)" }
+                : {}
+            }
+            onClick={(e) => handleCategories(e.target.innerHTML)}
+          >
             Trending
           </li>
-          <li onClick={(e) => handleCategories(e.target.innerHTML)}>
+          <li
+            style={
+              heading === "Top-Rated"
+                ? { color: "white", backgroundColor: "rgb(42, 137, 42)" }
+                : {}
+            }
+            onClick={(e) => handleCategories(e.target.innerHTML)}
+          >
             Top-Rated
           </li>
-          <li onClick={(e) => handleCategories(e.target.innerHTML)}>
+          <li
+            style={
+              heading === "Upcoming"
+                ? { color: "white", backgroundColor: "rgb(42, 137, 42)" }
+                : {}
+            }
+            onClick={(e) => handleCategories(e.target.innerHTML)}
+          >
             Upcoming
           </li>
         </ul>

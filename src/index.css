@@ -17,7 +17,7 @@ code {
     monospace;
 }
 header {
-  height: 20vh;
+  height: 21vh;
   width: 100%;
   background-color: rgb(42, 137, 42);
   color: white;
@@ -34,7 +34,7 @@ header {
 }
 nav {
   width: 100%;
-  margin-top: auto;
+  position: relative;
 }
 nav ul {
   display: flex;
@@ -76,7 +76,6 @@ main {
 .product-nav {
   border-bottom: 1px solid pink;
   display: flex;
-  padding: 15px;
 }
 .product-nav h2 {
   font-size: 28px;
@@ -86,6 +85,7 @@ main {
 #categories {
   display: flex;
   list-style: none;
+  padding: 1%;
 }
 #categories li {
   padding-top: none;
@@ -146,9 +146,18 @@ main {
   color: rgb(42, 137, 42);
   font-weight: bold;
 }
+.product-count {
+  color: white;
+  padding: 5px;
+}
+.count-div {
+  display: flex;
+  align-items: center;
+  visibility: hidden;
+}
 /* Footer Portion */
 #footer {
-  height: 10vh;
+  height: 9vh;
   width: 100%;
   background-color: rgb(42, 137, 42);
   color: white;
@@ -156,4 +165,22 @@ main {
 #footer p {
   text-align: center;
   padding-top: 1vh;
+}
+
+@media screen and (max-width: 768px) {
+  .product-nav h2 {
+    display: none;
+  }
+  #categories {
+    margin: 0 auto;
+  }
+  .display-div .card-div {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .display-div .card-div {
+    width: 70%;
+  }
 }
