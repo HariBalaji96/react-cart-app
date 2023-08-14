@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Display from "../components/Display";
 import { requests } from "../api/requests";
 
-const Products = ({ movies, setAPI }) => {
+const Products = ({ movies, setAPI, setCart ,cart}) => {
   const [heading, setHeading] = useState("Popular");
   const handleCategories = (category) => {
     setHeading(category);
@@ -72,7 +72,7 @@ const Products = ({ movies, setAPI }) => {
           </li>
         </ul>
       </div>
-      <Display movies={movies} />
+      <Display movies={movies} setCart={setCart} cart={cart}/>
     </main>
   );
 };

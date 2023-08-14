@@ -1,7 +1,7 @@
 import React from "react";
 
 import CartButton from "./CartButton";
-const Display = ({ movies }) => {
+const Display = ({ movies, setCart ,cart}) => {
   return (
     <div className="display-div">
       {movies.map((movie) => (
@@ -11,7 +11,7 @@ const Display = ({ movies }) => {
             alt={movie.title}
           />
           <p className="movie-title">{movie.title}</p>
-          <CartButton id={movie.id} />
+          <CartButton id={movie.id} setCart={setCart} movie={movie} cart={cart} />
         </div>
       ))}
     </div>

@@ -1,15 +1,23 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Nav = () => {
+const Nav = ({ cart }) => {
   return (
     <nav>
       <form className="search-form" autoComplete="off">
-        <input type="text" placeholder="Search Products"/>
+        <input type="text" placeholder="Search Products" />
       </form>
-      <ul>
-        <li>Products</li>
-        <li>Cart</li>
-      </ul>
+      <div className="link-div">
+        <Link className="link-element" to="/">
+          <div>Products</div>
+        </Link>
+
+        <Link className="link-element" to="/cart">
+          <div>
+            Cart<span className="element-count">{cart.length}</span>
+          </div>
+        </Link>
+      </div>
     </nav>
   );
 };

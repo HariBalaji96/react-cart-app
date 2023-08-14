@@ -36,12 +36,12 @@ nav {
   width: 100%;
   position: relative;
 }
-nav ul {
+.link-div {
   display: flex;
   width: 100%;
   justify-content: space-around;
 }
-nav ul li {
+.link-div .link-element {
   list-style-type: none;
   text-align: center;
   width: 100%;
@@ -49,10 +49,29 @@ nav ul li {
   padding: 10px;
   cursor: pointer;
 }
-nav ul li:hover {
+.link-div .link-element:hover {
   background-color: white;
+}
+.link-element {
+  color: white;
+  text-decoration: none;
+}
+.link-div .link-element:hover {
   color: rgb(42, 137, 42);
   font-weight: bold;
+}
+.link-div .link-element:hover .element-count {
+  color: white;
+  background-color: rgb(42, 137, 42);
+  font-weight: normal;
+}
+.element-count {
+  background-color: white;
+  margin-left: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 50%;
+  color: rgb(42, 137, 42);
 }
 .search-form {
   display: flex;
@@ -69,6 +88,14 @@ nav ul li:hover {
 }
 
 /* Product Main Pages */
+.error-msg {
+  font-weight: lighter;
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  text-align: center;
+  width: 100%;
+  display: none;
+}
 main {
   max-height: 70vh;
   overflow-y: scroll;
