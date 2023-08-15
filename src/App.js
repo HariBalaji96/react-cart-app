@@ -31,7 +31,7 @@ function App() {
             <Products movies={movies} setAPI={setAPI} setCart={setCart} cart = {cart}/>
           }
         />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/cart" element={<Cart cart={cart}/>} />
       </Routes>
       <Footer />
     </div>
