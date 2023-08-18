@@ -1,13 +1,214 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+header {
+  height: 21vh;
+  width: 100%;
+  background-color: rgb(42, 137, 42);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-title {
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-top: 10px;
+  font-size: 36px;
+  cursor: pointer;
+}
+nav {
+  width: 100%;
+  position: relative;
+}
+.link-div {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.link-div .link-element {
+  list-style-type: none;
+  text-align: center;
+  width: 100%;
+  border: white solid 2px;
+  padding: 10px;
+  cursor: pointer;
+}
+.link-div .link-element:hover {
+  background-color: white;
+}
+.link-element {
+  color: white;
+  text-decoration: none;
+}
+.link-div .link-element:hover {
+  color: rgb(42, 137, 42);
+  font-weight: bold;
+}
+.link-div .link-element:hover .element-count {
+  color: white;
+  background-color: rgb(42, 137, 42);
+  font-weight: normal;
+}
+.element-count {
+  background-color: white;
+  margin-left: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 50%;
+  color: rgb(42, 137, 42);
+}
+.search-form {
+  display: flex;
+}
+.search-form input {
+  padding: 10px;
+  width: 90%;
+  margin: 5px auto;
+  border: none;
+  border-radius: 10px;
+}
+.search-form input:focus {
+  outline: none;
+}
+
+/* Product Main Pages */
+.error-msg {
+  font-weight: lighter;
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  text-align: center;
+  width: 100%;
+  display: none;
+}
+main {
+  min-height: 70vh;
+  max-height: 70vh;
+  overflow-y: scroll;
+}
+.product-nav {
+  border-bottom: 1px solid pink;
+  display: flex;
+}
+.product-nav h2 {
+  font-size: 28px;
+  color: rgb(42, 137, 42);
+  margin: 0 auto;
+}
+#categories {
+  display: flex;
+  list-style: none;
+  padding: 1%;
+}
+#categories li {
+  padding-top: none;
+  padding: 5px;
+  border: 1px solid rgb(42, 137, 42);
+}
+#categories li:nth-child(1) {
+  border-radius: 50px 0px 0px 50px;
+}
+#categories li:nth-child(4) {
+  border-radius: 0px 50px 50px 0px;
+}
+#categories li:hover {
+  background-color: rgb(42, 137, 42);
+  color: white;
+  cursor: pointer;
+}
+/* Display Component */
+.display-div {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.card-div {
+  width: 20%;
+  background-color: rgb(42, 137, 42);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1%;
+  border-radius: 10px;
+}
+.card-div:hover {
+  border: 2px solid black;
+}
+.card-div img {
+  width: 50%;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+.movie-title {
+  text-align: center;
+  color: white;
+}
+.cart-button {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: transparent;
+  border: 2px solid white;
+  margin: 5px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+.cart-button:hover {
+  background-color: white;
+  color: rgb(42, 137, 42);
+  font-weight: bold;
+}
+.product-count {
+  color: white;
+  padding: 5px;
+}
+.count-div {
+  display: flex;
+  align-items: center;
+  visibility: hidden;
+}
+/* Footer Portion */
+#footer {
+  height: 9vh;
+  width: 100%;
+  background-color: rgb(42, 137, 42);
+  color: white;
+}
+#footer p {
+  text-align: center;
+  padding-top: 1vh;
+}
+
+@media screen and (max-width: 768px) {
+  .product-nav h2 {
+    display: none;
+  }
+  #categories {
+    margin: 0 auto;
+  }
+  .display-div .card-div {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .display-div .card-div {
+    width: 70%;
+  }
 }
